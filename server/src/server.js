@@ -24,6 +24,6 @@ app.post('/reverse', function (req, res) {
     var reversed = reverseString(req.body);
     res.send(reversed);
   } else {
-    // POST did not contain a string. Send an error code back!
+    res.status(400).end()
   }
 });
